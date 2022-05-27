@@ -1,0 +1,143 @@
+.Hangman{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    overflow: hidden;
+}
+
+
+.clue{
+    font-size: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.Hangman H2{
+    margin-top:20px;
+    font-size: 3rem;
+}
+
+.Hangman button{
+    border: none;
+    width: 28px;
+    height: 50px;
+    margin: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #44B491;
+    box-shadow: 0 6px #A6BED6;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 25px;
+}
+
+.Hangman button:hover{
+    background-color: #1BE5A5;
+}
+.Hangman button:disabled{
+    background-color: #787878;
+    color: #BEBEBE;
+}
+
+.guessedWord{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.Hangman img{
+    display: block;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+#attemptCounter{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#reset{
+    border: none;
+    width: 70px;
+    height: 30px;
+    margin: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #96C6FF;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: none;
+    border-radius: 25px;
+    transition: width 600ms ease;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    margin-bottom: 72px;
+}
+
+#reset:hover{
+    transition: 0.7s;
+    background-color: #BEDCFF;
+    transform: rotate(-360deg) scale(1.5);
+    
+}
+
+@keyframes winner{
+    0% {color: #71E347 ; transform: scale(1.5);}
+    10% {color: #000000;transform: scale(1);}
+    20% {color: #71E347 ;transform: scale(1.5);}
+    30% {color: #000000; transform: scale(1);}
+    40% {color: #71E347 ; transform: scale(1.5);}
+    50% {color: #000000; transform: scale(1);}
+    60% {color: #71E347 ; transform: scale(1.5);}
+    70% {color: #000000; transform: scale(1);}
+    80% {color: #71E347 ; transform: scale(1.5);}
+    100% {color: #000000; transform: scale(1);}
+}
+
+#winScreen{
+    color: #71E347;
+    animation-name: winner;
+    animation-duration: 30s;
+}
+
+
+@keyframes loser{
+    0% {color: #FF4848 ; transform: scale(1.5);}
+    10% {color: #000000;transform: scale(1);}
+    20% {color: #FF4848 ;transform: scale(1.5);}
+    30% {color: #000000; transform: scale(1);}
+    40% {color: #FF4848 ; transform: scale(1.5);}
+    50% {color: #000000; transform: scale(1);}
+    60% {color: #FF4848 ; transform: scale(1.5);}
+    70% {color: #000000; transform: scale(1);}
+    80% {color: #FF4848 ; transform: scale(1.5);}
+    100% {color: #000000; transform: scale(1);}
+}
+
+#loseScreen{
+    color: #FF4848;
+    animation-name: loser;
+    animation-duration: 30s;
+}
+
+@media only screen and (max-width: 600px) {
+    .Hangman{
+        min-width: 420px;
+        max-height: auto;
+    }
+
+}
+
+footer{
+    margin-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    left: 15%;
+    color: black;
+    text-decoration: none;
+}
+
