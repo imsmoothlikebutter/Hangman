@@ -60,10 +60,10 @@ class Hangman extends Component{
         var letter;
         let letter1 = e.target.value;
         let letter2 = e.key;  
-        console.log("OnscreenKB: ",letter1);
+        //console.log("OnscreenKB: ",letter1);
         if (e.keyCode>= 65 && e.keyCode <= 90){      
             letter2 = letter2.toUpperCase();
-            console.log("AcutalKB: ",letter2)
+            //console.log("AcutalKB: ",letter2)
         }
         if (letter1 == null){
             letter = letter2;
@@ -78,8 +78,8 @@ class Hangman extends Component{
                 attempt: st.attempt+(st.answer.includes(letter) ? 0: 1),
             }));
         }
-        console.log(this.state.attempt);
-        console.log(this.state.guessed);
+        //console.log(this.state.attempt);
+        //console.log(this.state.guessed);
         return this.state.attempt
     }
 
@@ -125,15 +125,15 @@ class Hangman extends Component{
     render(){
         const loser = this.state.attempt === 6;
         const winner = this.guessedWord().join("") === this.state.answer
-        console.log("CHECK: ",this.guessedWord().join(""));
+        //console.log("CHECK: ",this.guessedWord().join(""));
         let keyRow = this.generateWholeKeybaord();
         if (loser) keyRow = <div className="gameState"><h2 id="loseScreen">YOU LOSE</h2><button id="reset" onClick={this.refreshPage}>RETRY</button></div>
         if (winner) keyRow = <div className="gameState"><h2 id="winScreen">YOU WIN</h2><button id="reset" onClick={this.refreshPage}>RETRY</button></div>
-        console.log("Winner: ",winner);
-        console.log("GameOver: ",loser);
-        console.log("Answer: ",this.state.answer);
-        console.log("Clue: ",this.state.clue);
-        console.log("Guess: ",this.state.guessed);
+        //console.log("Winner: ",winner);
+        //console.log("GameOver: ",loser);
+        //console.log("Answer: ",this.state.answer);
+        //console.log("Clue: ",this.state.clue);
+        //console.log("Guess: ",this.state.guessed);
         document.addEventListener("keydown",this.checkLetter,false);
         return(
             <div className="Hangman">
