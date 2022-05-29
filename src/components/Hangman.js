@@ -60,10 +60,9 @@ class Hangman extends Component{
         var letter;
         let letter1 = e.target.value;
         let letter2 = e.key;  
-        //console.log("OnscreenKB: ",letter1);
+
         if (e.keyCode>= 65 && e.keyCode <= 90){      
             letter2 = letter2.toUpperCase();
-            //console.log("AcutalKB: ",letter2)
         }
         if (letter1 == null){
             letter = letter2;
@@ -78,8 +77,7 @@ class Hangman extends Component{
                 attempt: st.attempt+(st.answer.includes(letter) ? 0: 1),
             }));
         }
-        //console.log(this.state.attempt);
-        //console.log(this.state.guessed);
+
         return this.state.attempt
     }
 
